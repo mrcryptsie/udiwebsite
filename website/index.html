@@ -1373,11 +1373,27 @@ nav.scrolled {
   object-fit: contain;
   filter: grayscale(1) brightness(0) invert(1);
   opacity: .45;
-  transition: opacity .3s, filter .3s;
+  transition: opacity .3s, filter .3s, transform .3s, box-shadow .3s, background-color .3s;
+}
+.partner-logo--card {
+  box-sizing: border-box;
+  height: 34px;
+  max-width: 148px;
+  padding: 8px 12px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.96);
+  box-shadow: 0 10px 24px rgba(0,0,0,.18);
+  filter: none;
+  opacity: .92;
 }
 .ticker-item:hover .partner-logo {
   opacity: 1;
   filter: grayscale(0) brightness(1) invert(0);
+  transform: translateY(-1px);
+}
+.ticker-item:hover .partner-logo--card {
+  filter: none;
+  box-shadow: 0 14px 30px rgba(0,0,0,.24);
 }
 /* Fallback text si image absente */
 .partner-fallback {
@@ -1902,9 +1918,8 @@ footer {
 
   <div class="ticker-outer">
     <div class="ticker-track" id="tickerTrack">
-      <!-- ══ SET A ══ -->
+      <!-- SET A -->
       <div class="ticker-item">
-        <!-- Remplacer src par : ./assets/partners/asin.png -->
         <img src="./assets/partners/asin.png"
              alt="ASIN"
              class="partner-logo"
@@ -1912,23 +1927,20 @@ footer {
         <div class="partner-fallback" style="display:none">ASIN</div>
       </div>
       <div class="ticker-item">
-        <!-- Remplacer src par : ./assets/partners/dsi-club-benin.png -->
-        <img src="./assets/partners/dsi-club-benin.png"
-             alt="DSI Club Bénin"
+        <img src="./assets/partners/dsiawards.png"
+             alt="DSI Awards"
              class="partner-logo"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="partner-fallback" style="display:none">DSI Club Bénin</div>
+        <div class="partner-fallback" style="display:none">DSI Awards</div>
       </div>
       <div class="ticker-item">
-        <!-- Remplacer src par : ./assets/partners/simplon-benin.png -->
-        <img src="./assets/partners/simplon-benin.png"
-             alt="Simplon Bénin"
+        <img src="./assets/partners/simplon.png"
+             alt="Simplon"
              class="partner-logo"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="partner-fallback" style="display:none">Simplon Bénin</div>
+        <div class="partner-fallback" style="display:none">Simplon</div>
       </div>
       <div class="ticker-item">
-        <!-- Remplacer src par : ./assets/partners/tefconnect.png -->
         <img src="./assets/partners/tefconnect.png"
              alt="TEFConnect"
              class="partner-logo"
@@ -1936,23 +1948,20 @@ footer {
         <div class="partner-fallback" style="display:none">TEFConnect</div>
       </div>
       <div class="ticker-item">
-        <!-- Remplacer src par : ./assets/partners/data-afrique-hub.png -->
-        <img src="./assets/partners/data-afrique-hub.png"
+        <img src="./assets/partners/dataafriquehub.png"
              alt="Data Afrique Hub"
              class="partner-logo"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <div class="partner-fallback" style="display:none">Data Afrique Hub</div>
       </div>
       <div class="ticker-item">
-        <!-- Remplacer src par : ./assets/partners/aigie-africa.png -->
-        <img src="./assets/partners/aigie-africa.png"
-             alt="Aigie Africa"
-             class="partner-logo"
+        <img src="./assets/partners/aigie.jpg"
+             alt="AIGIE"
+             class="partner-logo partner-logo--card"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="partner-fallback" style="display:none">Aigie Africa</div>
+        <div class="partner-fallback" style="display:none">AIGIE</div>
       </div>
       <div class="ticker-item">
-        <!-- Remplacer src par : ./assets/partners/ifri.png -->
         <img src="./assets/partners/ifri.png"
              alt="IFRI"
              class="partner-logo"
@@ -1960,32 +1969,64 @@ footer {
         <div class="partner-fallback" style="display:none">IFRI</div>
       </div>
       <div class="ticker-item">
-        <!-- Remplacer src par : ./assets/partners/celtiis.png -->
-        <img src="./assets/partners/celtiis.png"
+        <img src="./assets/partners/celtiis.svg"
              alt="Celtiis"
-             class="partner-logo"
+             class="partner-logo partner-logo--card"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <div class="partner-fallback" style="display:none">Celtiis</div>
       </div>
       <div class="ticker-item">
-        <!-- Remplacer src par : ./assets/partners/mtn-business.png -->
-        <img src="./assets/partners/mtn-business.png"
-             alt="MTN Business"
-             class="partner-logo"
+        <img src="./assets/partners/bestim.png"
+             alt="Bestim"
+             class="partner-logo partner-logo--card"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="partner-fallback" style="display:none">MTN Business</div>
+        <div class="partner-fallback" style="display:none">Bestim</div>
       </div>
       <div class="ticker-item">
-        <!-- Remplacer src par : ./assets/partners/acma.png -->
-        <img src="./assets/partners/acma.png"
-             alt="ACMA"
+        <img src="./assets/partners/semecity.svg"
+             alt="Seme City"
              class="partner-logo"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="partner-fallback" style="display:none">ACMA</div>
+        <div class="partner-fallback" style="display:none">Seme City</div>
       </div>
-      <!-- ══ SET B — duplicate pour boucle fluide ══ -->
       <div class="ticker-item">
-        <!-- Remplacer src par : ./assets/partners/asin.png -->
+        <img src="./assets/partners/orienty.png"
+             alt="Orienty"
+             class="partner-logo"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="partner-fallback" style="display:none">Orienty</div>
+      </div>
+      <div class="ticker-item">
+        <img src="./assets/partners/futurestudio.jpeg"
+             alt="Future Studio"
+             class="partner-logo partner-logo--card"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="partner-fallback" style="display:none">Future Studio</div>
+      </div>
+      <div class="ticker-item">
+        <img src="./assets/partners/adjia.jpeg"
+             alt="Adjia"
+             class="partner-logo partner-logo--card"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="partner-fallback" style="display:none">Adjia</div>
+      </div>
+      <div class="ticker-item">
+        <img src="./assets/partners/menorah.jpeg"
+             alt="Menorah"
+             class="partner-logo partner-logo--card"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="partner-fallback" style="display:none">Menorah</div>
+      </div>
+      <div class="ticker-item">
+        <img src="./assets/partners/theo.jpeg"
+             alt="Theo"
+             class="partner-logo partner-logo--card"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="partner-fallback" style="display:none">Theo</div>
+      </div>
+
+      <!-- SET B -->
+      <div class="ticker-item">
         <img src="./assets/partners/asin.png"
              alt="ASIN"
              class="partner-logo"
@@ -1993,23 +2034,20 @@ footer {
         <div class="partner-fallback" style="display:none">ASIN</div>
       </div>
       <div class="ticker-item">
-        <!-- Remplacer src par : ./assets/partners/dsi-club-benin.png -->
-        <img src="./assets/partners/dsi-club-benin.png"
-             alt="DSI Club Bénin"
+        <img src="./assets/partners/dsiawards.png"
+             alt="DSI Awards"
              class="partner-logo"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="partner-fallback" style="display:none">DSI Club Bénin</div>
+        <div class="partner-fallback" style="display:none">DSI Awards</div>
       </div>
       <div class="ticker-item">
-        <!-- Remplacer src par : ./assets/partners/simplon-benin.png -->
-        <img src="./assets/partners/simplon-benin.png"
-             alt="Simplon Bénin"
+        <img src="./assets/partners/simplon.png"
+             alt="Simplon"
              class="partner-logo"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="partner-fallback" style="display:none">Simplon Bénin</div>
+        <div class="partner-fallback" style="display:none">Simplon</div>
       </div>
       <div class="ticker-item">
-        <!-- Remplacer src par : ./assets/partners/tefconnect.png -->
         <img src="./assets/partners/tefconnect.png"
              alt="TEFConnect"
              class="partner-logo"
@@ -2017,23 +2055,20 @@ footer {
         <div class="partner-fallback" style="display:none">TEFConnect</div>
       </div>
       <div class="ticker-item">
-        <!-- Remplacer src par : ./assets/partners/data-afrique-hub.png -->
-        <img src="./assets/partners/data-afrique-hub.png"
+        <img src="./assets/partners/dataafriquehub.png"
              alt="Data Afrique Hub"
              class="partner-logo"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <div class="partner-fallback" style="display:none">Data Afrique Hub</div>
       </div>
       <div class="ticker-item">
-        <!-- Remplacer src par : ./assets/partners/aigie-africa.png -->
-        <img src="./assets/partners/aigie-africa.png"
-             alt="Aigie Africa"
-             class="partner-logo"
+        <img src="./assets/partners/aigie.jpg"
+             alt="AIGIE"
+             class="partner-logo partner-logo--card"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="partner-fallback" style="display:none">Aigie Africa</div>
+        <div class="partner-fallback" style="display:none">AIGIE</div>
       </div>
       <div class="ticker-item">
-        <!-- Remplacer src par : ./assets/partners/ifri.png -->
         <img src="./assets/partners/ifri.png"
              alt="IFRI"
              class="partner-logo"
@@ -2041,28 +2076,60 @@ footer {
         <div class="partner-fallback" style="display:none">IFRI</div>
       </div>
       <div class="ticker-item">
-        <!-- Remplacer src par : ./assets/partners/celtiis.png -->
-        <img src="./assets/partners/celtiis.png"
+        <img src="./assets/partners/celtiis.svg"
              alt="Celtiis"
-             class="partner-logo"
+             class="partner-logo partner-logo--card"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <div class="partner-fallback" style="display:none">Celtiis</div>
       </div>
       <div class="ticker-item">
-        <!-- Remplacer src par : ./assets/partners/mtn-business.png -->
-        <img src="./assets/partners/mtn-business.png"
-             alt="MTN Business"
-             class="partner-logo"
+        <img src="./assets/partners/bestim.png"
+             alt="Bestim"
+             class="partner-logo partner-logo--card"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="partner-fallback" style="display:none">MTN Business</div>
+        <div class="partner-fallback" style="display:none">Bestim</div>
       </div>
       <div class="ticker-item">
-        <!-- Remplacer src par : ./assets/partners/acma.png -->
-        <img src="./assets/partners/acma.png"
-             alt="ACMA"
+        <img src="./assets/partners/semecity.svg"
+             alt="Seme City"
              class="partner-logo"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="partner-fallback" style="display:none">ACMA</div>
+        <div class="partner-fallback" style="display:none">Seme City</div>
+      </div>
+      <div class="ticker-item">
+        <img src="./assets/partners/orienty.png"
+             alt="Orienty"
+             class="partner-logo"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="partner-fallback" style="display:none">Orienty</div>
+      </div>
+      <div class="ticker-item">
+        <img src="./assets/partners/futurestudio.jpeg"
+             alt="Future Studio"
+             class="partner-logo partner-logo--card"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="partner-fallback" style="display:none">Future Studio</div>
+      </div>
+      <div class="ticker-item">
+        <img src="./assets/partners/adjia.jpeg"
+             alt="Adjia"
+             class="partner-logo partner-logo--card"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="partner-fallback" style="display:none">Adjia</div>
+      </div>
+      <div class="ticker-item">
+        <img src="./assets/partners/menorah.jpeg"
+             alt="Menorah"
+             class="partner-logo partner-logo--card"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="partner-fallback" style="display:none">Menorah</div>
+      </div>
+      <div class="ticker-item">
+        <img src="./assets/partners/theo.jpeg"
+             alt="Theo"
+             class="partner-logo partner-logo--card"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="partner-fallback" style="display:none">Theo</div>
       </div>
     </div>
   </div>
